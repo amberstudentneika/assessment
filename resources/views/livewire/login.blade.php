@@ -16,7 +16,7 @@
                <br/> <label>Enter Password</label><br/>
                 <input type="password" wire:model="lvPassword" placeholder="">
                 <div class="flex items-baseline justify-between">
-                    <button wire:click="Login()" class="px-6 py-2 mt-4 text-white bg-green-600 rounded-lg hover:bg-green-800">Login</button>
+                    <button wire:click.prevent="Login" class="px-6 py-2 mt-4 text-white bg-green-600 rounded-lg hover:bg-green-800">Login</button>
                 </div>
             </div>
         </div>
