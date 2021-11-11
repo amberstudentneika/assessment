@@ -20,16 +20,18 @@ class User extends Authenticatable
     protected $fillable = [
         'fName',
         'lName',
+        'gender',
+        'dob',
         'role',
         'email',
         'password',
     ];
 
     public function students(){
-        $this->hasMany(student::class);
+        return $this->hasMany(student::class,'userID');
     }
     public function teachers(){
-        $this->hasMany(teacher::class);
+        return $this->hasMany(teacher::class,'user_ID');
     }
     /**
      * The attributes that should be hidden for serialization.

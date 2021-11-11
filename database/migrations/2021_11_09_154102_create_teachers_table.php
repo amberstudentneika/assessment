@@ -15,8 +15,7 @@ class CreateTeachersTable extends Migration
     {
         Schema::create('teachers', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('scheduleID')->unsigned();
-            $table->foreign('scheduleID')->references('id')->on('schedules');
+            $table->foreignId('user_ID')->constrained('users','id');
             $table->timestamps();
         });
     }

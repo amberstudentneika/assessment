@@ -19,7 +19,6 @@ class CreateCourseSelectionsTable extends Migration
             $table->foreign('studentID')->references('id')->on('students');
             $table->bigInteger('courseID')->unsigned();
             $table->foreign('courseID')->references('id')->on('courses');
-
             $table->timestamps();
         });
     }

@@ -10,15 +10,16 @@ class student extends Model
     use HasFactory;
 
     protected $fillable=[
-        'studentID',
+        'userID',
         'assignID'
 
     ];
 
     public function user(){
-        $this->belongsTo(User::class);
+        return $this->belongsTo(User::class,'userID');
     }
-    public function courseSelection(){
-        $this->hasMany(courseSelection::class);
+    public function courseSelections(){
+        return $this->hasMany(courseSelection::class,'studentID');
     }
+
 }

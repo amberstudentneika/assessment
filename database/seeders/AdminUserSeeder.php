@@ -19,6 +19,8 @@ class AdminUserSeeder extends Seeder
             'fName' => 'Shaneika',
             'lName' => 'Lewis',
             'email' => 'slewis@gmail.com',
+            'gender'=> 'female',
+            'dob'=>'2021-5-5',
             'role' => '0',
             'password' => Hash::make('password')
         ]);

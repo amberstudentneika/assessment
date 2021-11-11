@@ -10,13 +10,13 @@ class teacher extends Model
     use HasFactory;
 
     protected $fillable=[
-'scheduleID',
+        'user_ID'
     ];
 
     public function user(){
-        $this->belongsTo(User::class);
+        return $this->belongsTo(User::class,'user_ID');
     }
-    public function schedule(){
-        $this->belongsTo(schedule::class);
+    public function schedules(){
+        return $this->hasMany(schedule::class,'teacher_ID');
     }
 }

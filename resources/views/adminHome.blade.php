@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.appAdmin')
 
 @section('content')
 <main class="sm:container sm:mx-auto sm:mt-10">
@@ -16,11 +16,6 @@
                 Admin Dashboard
             </header>
 
-            <div class="w-full p-6">
-                <p class="text-gray-700">
-                    You are logged in!
-                </p>
-            </div>
         </section>
     </div>
 </main>

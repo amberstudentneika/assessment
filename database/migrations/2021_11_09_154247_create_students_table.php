@@ -15,8 +15,8 @@ class CreateStudentsTable extends Migration
     {
         Schema::create('students', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('studentID')->unsigned();
-            $table->foreign('studentID')->references('id')->on('users');
+            $table->bigInteger('userID')->unsigned();
+            $table->foreign('userID')->references('id')->on('users');
             $table->bigInteger('assignID')->unsigned();
             $table->foreign('assignID')->references('id')->on('teachers');
             $table->timestamps();

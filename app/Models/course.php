@@ -10,10 +10,15 @@ class course extends Model
     use HasFactory;
 
     protected $fillable=[
-        'name'
+        'name',
+
     ];
 
     public function schedules(){
-        $this->hasMany(schedule::class);
+        return $this->hasMany(schedule::class,'courseID');
+    }
+
+    function courseSelections(){
+        return $this->hasMany(courseSelection::Class,'courseID');
     }
 }

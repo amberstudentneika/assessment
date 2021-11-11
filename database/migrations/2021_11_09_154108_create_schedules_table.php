@@ -17,10 +17,10 @@ class CreateSchedulesTable extends Migration
             $table->id();
             $table->bigInteger('courseID')->unsigned();
             $table->foreign('courseID')->references('id')->on('courses');
-            $table->bigInteger('teacherID');
-//            $table->foreign('teacherID')->references('id')->on('teachers');
-            $table->string('time');
+            $table->foreignId('teacher_ID')->constrained('teachers','id');
             $table->string('day');
+            $table->time('start');
+            $table->time('end');
             $table->timestamps();
         });
     }

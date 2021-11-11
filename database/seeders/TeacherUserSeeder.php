@@ -19,6 +19,8 @@ class TeacherUserSeeder extends Seeder
             'fName' => 'teacher',
             'lName' => 'test',
             'email' => 'teacher@gmail.com',
+            'gender'=> 'female',
+            'dob'=>'2021-5-5',
             'role' => '2',
             'password' => Hash::make('password')
         ]);

@@ -11,15 +11,16 @@ class schedule extends Model
 
     protected $fillable=[
         'courseID',
-        'teacherID',
-        'time',
-        'day'
+        'teacher_ID',
+        'day',
+        'start',
+        'end',
     ];
 
-    public function teachers(){
-        $this->hasMany(teacher::class);
+    public function teacher(){
+        return $this->belongsTo(teacher::class,'teacher_ID');
     }
-    public function courses(){
-        $this->belongsTo(course::class);
+    public function course(){
+        return $this->belongsTo(course::class,'courseID');
     }
 }
