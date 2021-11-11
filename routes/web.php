@@ -20,7 +20,7 @@ Route::get('/login','App\Http\Controllers\LoginController@login' )->name('liveLo
 
 Route::middleware(['Auth'])->group(function(){
 
-
+//homepage
 Route::get('/home/admin','App\Http\Controllers\IndexController@adminHome')->name('adminHome');
 Route::get('/home/teacher','App\Http\Controllers\IndexController@teacherHome')->name('teacherHome');
 Route::get('/home/student','App\Http\Controllers\IndexController@studentHome')->name('studentHome');
